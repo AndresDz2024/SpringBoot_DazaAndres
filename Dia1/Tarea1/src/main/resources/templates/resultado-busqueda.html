@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado de Búsqueda</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Resultado de la Búsqueda</h1>
+<div th:if="${persona != null}">
+    <p><strong>Nombre:</strong> <span th:text="${persona.nombre}"></span></p>
+    <p><strong>Edad:</strong> <span th:text="${persona.edad}"></span></p>
+</div>
+<div th:if="${persona == null}">
+    <p>Persona no encontrada.</p>
+</div>
+<a th:href="@{/personas}">Volver a la lista</a>
+</body>
+</html>
